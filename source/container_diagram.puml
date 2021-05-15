@@ -1,0 +1,30 @@
+@startuml Basic Sample
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+LAYOUT_LEFT_RIGHT()
+LAYOUT_WITH_LEGEND()
+
+title Container diagram for Anno III Electronics
+
+Person(navigator, "Navigator", "The navigator of the boat")
+Person(helmsman, "Helmsman", "The helmsman that stears tha boat")
+
+System_Boundary(ship_electronics, "Ship Electronics") {
+
+  Container(electrics, "Electric system", '')
+  Container(navigation, "Navigation system", '')
+  Container(sailing, "Saling indicatiors", '')
+  Container(engine, "Engine system", '')
+
+  Rel(navigation, electrics, "Uses")
+  Rel(sailing, electrics, "Uses")
+  Rel(engine, electrics, "Uses")
+  Rel(engine, electrics, "Charges")
+}
+
+Rel(navigator, navigation, "Uses")
+Rel(helmsman, navigation, "Uses")
+Rel(helmsman, sailing, "Uses")
+
+
+SHOW_LEGEND()
+@enduml

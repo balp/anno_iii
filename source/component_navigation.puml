@@ -1,0 +1,50 @@
+@startuml Basic Sample
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+LAYOUT_LEFT_RIGHT()
+LAYOUT_WITH_LEGEND()
+
+title Component diagram for Anno III Electronics
+
+Person_Ext(navigator, "Navigator", "The navigator of the boat")
+Person_Ext(helmsman, "Helmsman", "The helmsman that stears tha boat")
+
+Container_Ext(navigation, "Navigation system", '')
+Container_Ext(sailing, "Saling indicatiors", '')
+Container_Ext(engine, "Engine system", '')
+
+AddElementTag("missing", $fontColor="orange")
+
+Rel(navigator, navigation, "Uses")
+Rel(helmsman, navigation, "Uses")
+Rel(helmsman, sailing, "Uses")
+
+Container_Boundary(electrics, "Electric System") {
+  Person(manual_stuff, "Boat Engineer")
+  Component(start_battery, "Start battery", '12v')
+  Component(house_battery, "House battery", '12v')
+  Component(battry_charger, "Battery charger", '12v')
+
+  Component_Ext(shore_power, "Shore power", '230v')
+
+  Component(jordlesbrytare, "Jordfelsbrytare", '230v', $tags="missing")
+  Component(comfort_lights, "Comfort lights", '12v')
+  Component(navigation_lights, "Navigation lights", '12v')
+
+  Rel(manual_stuff, shore_power, "Connects")
+  Rel(manual_stuff, battry_charger, "Connects")
+  Rel(battry_charger, start_battery, "Charges")
+  Rel(battry_charger, house_battery, "Charges")
+  Rel(battry_charger, shore_power, "Uses")
+  Rel(navigation_lights, house_battery, "Uses")
+  Rel(comfort_lights, house_battery, "Uses")
+}
+Rel(navigation, house_battery, "Uses")
+Rel(sailing, house_battery, "Uses")
+Rel(engine, start_battery, "Uses")
+Rel(engine, start_battery, "Charges")
+Rel(engine, house_battery, "Charges")
+
+
+
+SHOW_LEGEND()
+@enduml

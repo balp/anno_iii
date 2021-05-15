@@ -1,0 +1,17 @@
+#################
+Boat Architecture
+#################
+
+
+.. uml:: system_context.puml
+
+
+Use Cases
+
+
+.. uml:: container_diagram.puml
+
+
+
+.. uml:: component_electric.puml
+

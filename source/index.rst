@@ -9,6 +9,8 @@ Welcome to Anno III - Forgus 31 - Documentation's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   c4
 
 
 
