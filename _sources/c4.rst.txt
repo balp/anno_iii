@@ -1,0 +1,64 @@
+#################
+Boat Architecture
+#################
+
+
+******************
+Architect Drawings
+******************
+
+
+Boat overview
+=============
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: systemLandscape
+
+
+Navigation System
+=================
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: systemContext_navigation
+
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: container_navigation
+
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: component_signalk
+
+Dynamic Navigation Views
+------------------------
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: dynamic_sail_autopilot
+
+Deployment in Boat
+------------------
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: deployment_live_navigation
+
+
+
+
+Electric system
+===============
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: systemContext_electric
+
+
+.. kroki:: anno_iii.dsl png
+   :options:
+       view-key: container_electric
+
