@@ -29,7 +29,7 @@ author = 'Anders Arnholm'
 # ones.
 extensions = [
         'myst_parser',
-        'sphinxcontrib.plantuml',
+        'sphinxcontrib.kroki',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
